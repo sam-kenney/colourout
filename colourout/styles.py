@@ -30,6 +30,7 @@ class Styles(str, Enum):
     MAGENTA = "\033[35m"
     CYAN = "\033[36m"
     WHITE = "\033[37m"
+    RESET = "\033[39m"
 
     LIGHT_BLACK = "\033[90m"
     LIGHT_RED = "\033[91m"

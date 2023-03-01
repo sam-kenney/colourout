@@ -32,7 +32,7 @@ Examples
 from __future__ import annotations
 
 __all__ = ("eprintc", "printc", "Styles")
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 from colourout.eprintc import eprintc
 from colourout.printc import printc
