@@ -2,12 +2,11 @@
 from __future__ import annotations
 
 import sys
-
 from typing import List
 from typing import Optional
 from typing import Union
 
-from colourout.process_styles import process_styles
+from colourout.printc import printc
 from colourout.styles import Styles
 
 
@@ -40,9 +39,4 @@ def eprintc(
     >>> eprintc("Hello, world!", styles=["BLUE", "ITALIC"])
     \033[94m\033[3mHello, world!\033[0m
     """
-    styles = styles or [Styles.END]
-    processed_styles = process_styles(styles)
-
-    print(*processed_styles, sep="", end="", file=sys.stderr)
-    print(*__values, sep=sep, end=end, file=sys.stderr)
-    print(Styles.END.value, end="", file=sys.stderr)
+    printc(*__values, sep=sep, end=end, styles=styles, file=sys.stderr)
